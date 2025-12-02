@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Setrex Testimonials</title>
+    <meta name="description" content="A recreation of the Setrex testimonial UI." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Manrope', 'sans-serif'],
+            },
+            colors: {
+              lime: {
+                150: '#E1F5AC', // Custom light lime for badges
+                450: '#BADA5F', // Custom logo green
+              },
+              neutral: {
+                850: '#1A1A1A',
+                900: '#121212',
+                950: '#0A0A0A',
+              }
+            },
+            fontSize: {
+              '7xl-tight': ['4.5rem', { lineHeight: '1' }],
+            }
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #0D1117;
+        color: #ffffff;
+        font-family: 'Manrope', sans-serif;
+      }
+      /* Custom utility for the subtle gradient on the main card */
+      .card-gradient {
+        background: linear-gradient(145deg, #24292f 0%, #161b22 100%);
+      }
+      /* Fade in animation for testimonials */
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in {
+        animation: fadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "matter-js": "https://esm.sh/matter-js@0.19.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
